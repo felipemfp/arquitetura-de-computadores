@@ -41,17 +41,17 @@ try:
             commands.append(int(line[0].split('$')[-1]))
             del line[0]
         else:
-            commands.append(32)
+            commands.append(31)
         if reference[operation][2] > -1:
             commands.append(int(line[0].split('$')[-1]))
             del line[0]
         else:
-            commands.append(32)
+            commands.append(31)
         if reference[operation][3] > -1:
             commands.append(int(line[0].split('$')[-1]))
             del line[0]
         else:
-            commands.append(32)
+            commands.append(31)
         if reference[operation][4] > -1:
             commands.append(int(line[0]))
             del line[0]
