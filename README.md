@@ -9,3 +9,16 @@
 **Disciplina**: Arquitetura de Computadores
 
 **Professor**: Eduardo Braulio
+
+---
+
+## Compilador
+
+Como usar:
+
+```bash
+./compiler.py < input.txt > output.hex
+```
+
+- input.txt é seu arquivo com as instruções
+- output.hex é seu código compilado para ULA
