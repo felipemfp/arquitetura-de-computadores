@@ -30,13 +30,15 @@ reference = {
 try:
     compiled = ''
     while(1):
-        line = [s.strip() for s in input().upper().split(',')]
-        operation = line[0]
+        line = input().upper().strip()
+        if '#' in line:
+            line, _ = line.split('#')
+        operation, line = line.split(' ', 1)
+        line = [s.strip() for s in line.split(',')]
         commands = []
         if operation not in reference.keys():
-            raise SyntaxError
+            raise SyntaxError('{} is not a valid operation.'.format(operation))
         commands.append(reference[operation][0])
-        del line[0]
         if reference[operation][1] > -1:
             commands.append(int(line[0].split('$')[-1]))
             del line[0]

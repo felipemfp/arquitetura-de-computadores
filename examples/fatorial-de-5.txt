@@ -1,20 +1,20 @@
-AND, $0, $0, $0
-SUB, $0, $0, $0
-SUB, $1, $1, $1
-SUB, $2, $2, $2
-SUB, $3, $3, $3
-SUB, $4, $4, $4
-ISUM, $1, $0, 5
-SUM, $3, $1, $0
-ISUB, $3, $3, 1
-BEQ, $3, $4, 4
-SUM, $2, $2, $1
-ISUM, $4, $4, 1
-JUMP, 9
-SUB, $4, $4, $4
-ISUB, $3, $3, 1
-SUM, $1, $2, $0
-SUB, $2, $2, $2
-BNQ, $3, $0, 2
-JUMP, 18
-JUMP, 9
+and $0, $0, $0      # 0. faz nada
+sub $0, $0, $0      # 1. zera o registrador 1
+sub $1, $1, $1      # 2. zera o registrador 1
+sub $2, $2, $2      # 3. zera o registrador 2
+sub $3, $3, $3      # 4. zera o registrador 3
+sub $4, $4, $4      # 5. zera o registrador 4
+isum $1, $0, 5      # 6. põe o valor 5 no registrador 1
+sum $3, $1, $0      # 7. põe o valor do registrador 1 no registrador 3
+isub $3, $3, 1      # 8. diminui 1 do valor do registrador 3
+beq $3, $4, 4       # 9. se registrador 3 e 4 são iguais, pule 4 endereços
+sum $2, $2, $1      # 10. soma o registrador 2 com o registrador 1
+isum $4, $4, 1      # 11. aumenta 1 no valor do registrador 4
+jump 9              # 12. pula para o endereço 9
+sub $4, $4, $4      # 13. zera o registrador 4
+isub $3, $3, 1      # 14. diminui 1 do valor do registrador 3
+sum $1, $2, $0      # 15. põe o valor do registrador 2 no registrador 1
+sub $2, $2, $2      # 16. zera o registrador 2
+bnq $3, $0, 2       # 17. se registrador 3 for diferente de 0, pule 2 endereços
+jump 18             # 18. pula para o endereço 18
+jump 9              # 19. pula para o endereço 9
