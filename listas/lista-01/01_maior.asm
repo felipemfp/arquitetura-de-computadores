@@ -1,6 +1,8 @@
-main:
+setup:
   addi $1, $0, 80
   addi $2, $0, 40
+  
+main:
   slt $4, $1, $2
   beq $4, $0, show_a
   j show_b
