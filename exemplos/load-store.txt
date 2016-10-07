@@ -1,7 +1,6 @@
-sub $0, $0, $0   # zera o $0
-isum $1, $0, 1   # adiciona 1 no $1
-isum $2, $0, 10  # adiciona 10 no $2
-store $2, $0, $1 # salva valor do $2 no ($0 + $1) endereco
-load $3, $0, $1  # carrega valor do ($0 + $1) endereco para $3
-and $3, $3, $3   # mostra valor do $3
-jump 5
+sub $0, $0, $0   # 0. zera o $0
+isum $2, $0, 10  # 1. adiciona 10 no $2
+store $2, $0, 1  # 2. salva valor do $2 no endereco 1
+load $3, $0, 1   # 3. carrega valor do endereco 1 para $3
+sub $0, $3, $3   # 4. mostra valor do $3
+jump 4           # 5. voltar para o anterior
