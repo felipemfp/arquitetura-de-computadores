@@ -4,7 +4,7 @@
 
 **Curso**: Análise e Desenvolvimento de Sistemas
 
-**Período**: 2º
+**Período**: 2016.2
 
 **Disciplina**: Arquitetura de Computadores
 
